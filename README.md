@@ -1,9 +1,17 @@
 Various JavaScript Modules
 ==========================
 
+**Status: dev**
+
 Various cross-platform JavaScript modules mostly taken from [narwhal](http://narwhaljs.org/) and related projects.
 
 **NOTE:** This package is intended to be used via the [PINF JavaScript Loader](https://github.com/pinf/loader-js).
+
+
+TODO
+====
+
+  * Complete refactoring some modules for new environment
 
 
 Support & Feedback
