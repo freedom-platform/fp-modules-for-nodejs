@@ -1,0 +1,55 @@
+{
+    "uid": "https://github.com/pinf/modules-js/",
+    "name": "modules-js",
+    "label": "Various JavaScript Modules",
+    "description": "Various cross-platform JavaScript modules",
+    "homepage": "https://github.com/pinf/modules-js",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git://github.com/pinf/modules-js.git"
+        }
+    ],
+    "maintainers": [
+        {
+            "name": "Christoph Dorn",
+            "email": "christoph@christophdorn.com",
+            "web": "http://www.christophdorn.com/"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/mit-license.php"
+        }
+    ],
+    "overlay": {
+        "pinf:jetpack": {
+            "mappings": {
+                "jetpack": {
+                    "id": "mozilla.org/labs/jetpack"
+                }
+            }
+        },
+        "pinf:node": {
+            "mappings": {
+                "nodejs": {
+                    "id": "nodejs.org"
+                },
+                "pinf": {
+                    "id": "pinf.org/loader",
+                    "available": true
+                }
+            }
+        }
+    },
+    "mappings": {
+        "pinf": {
+            "id": "pinf.org/loader",
+            "available": false
+        },
+        "q": {
+            "id": "github.com/kriskowal/q/"
+        }
+    }
+}
