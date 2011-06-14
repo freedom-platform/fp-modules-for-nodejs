@@ -1,5 +1,5 @@
-Various JavaScript Modules
-==========================
+Various Cross-platform JavaScript Modules 
+=========================================
 
 **Status: dev**
 
