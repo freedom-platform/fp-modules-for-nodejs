@@ -28,6 +28,10 @@
             "mappings": {
                 "jetpack": {
                     "id": "mozilla.org/labs/jetpack"
+                },
+                "pinf": {
+                    "id": "pinf.org/loader",
+                    "available": true
                 }
             }
         },
