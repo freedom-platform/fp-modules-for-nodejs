@@ -1,0 +1,38 @@
+{
+    "uid": "https://github.com/pinf/modules-js/",
+    "boot": "github.com/pinf/modules-js/",
+    "engine": [
+        "node"
+    ],
+    "packages": {
+        "github.com/pinf/modules-js/": {
+            "locator": {
+                "location": "."
+            }
+        },
+        "nodejs.org": {
+            "provider": "nodejs.org"
+        },
+        "pinf.org/loader": {
+            "provider": "pinf.org/loader"
+        },
+        "github.com/kriskowal/q/": {
+            "locator": {
+                "archive": "https://github.com/kriskowal/q/zipball/v0.3.0"
+            },
+            "descriptor": {
+                "uid": "https://github.com/kriskowal/q/",
+                "dependencies": [
+                    {
+                        "id": "github.com/pinf/modules-js/"
+                    }
+                ]
+            }
+        },
+        "github.com/pinf/test-js/": {
+            "locator": {
+                "archive": "http://github.com/pinf/test-js/zipball/v0.1.0"
+            }
+        }
+    }
+}

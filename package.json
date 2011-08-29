@@ -23,6 +23,12 @@
             "url": "http://www.opensource.org/licenses/mit-license.php"
         }
     ],
+    "main": "lib/modules.js",
+    "scripts": {
+        "test": {
+            "id": "github.com/pinf/test-js/"
+        }
+    },
     "overlay": {
         "pinf:jetpack": {
             "mappings": {

@@ -1,18 +1,21 @@
 
-var ASSERT = require("assert");
-var SEMVER = require("semver");
+var SEMVER = require("../lib/semver");
 
 
-exports.testGetMajor = function() {
-    
+exports.run = function(ASSERT, harness)
+{
+	harness.runAll(exports);
+}
+
+exports["test getMajor"] = function(ASSERT)
+{
     ASSERT.equal(SEMVER.getMajor("1.0.1"), "1");
     ASSERT.equal(SEMVER.getMajor("1.0.1", true), "1");
     ASSERT.equal(SEMVER.getMajor("1.0.1alpha1", true), "1.0.1alpha");
-
 }
 
-exports.testValidate = function() {
-
+exports["test validate"] = function(ASSERT)
+{
     [
         "0.1.0",
         "0.1.1alpha",
@@ -52,11 +55,10 @@ exports.testValidate = function() {
     ].forEach(function(version) {
         ASSERT.ok(!SEMVER.validate(version, {"withSuffix":true}));        
     });
-
 }
 
-exports.testCompare = function() {
-    
+exports["test compare"] = function(ASSERT)
+{
     var result;
         
     result = SEMVER.compare("1.0", "1.1");
@@ -69,8 +71,8 @@ exports.testCompare = function() {
     ASSERT.equal(result, 1);
 }
 
-exports.testSort = function() {
-
+exports["test sort"] = function(ASSERT)
+{
     var versions = [],
         result;
 
@@ -105,8 +107,8 @@ exports.testSort = function() {
     ]);    
 }
 
-exports.testLatestForMajor = function() {
-    
+exports["test latestForMajor"] = function(ASSERT)
+{
     var versions = [],
         version = null,
         result;
@@ -170,8 +172,8 @@ exports.testLatestForMajor = function() {
     ASSERT.equal(result, "1.1.0alpha");
 }
 
-exports.testLatestForEachMajor = function() {
-
+exports["test latestForEachMajor"] = function(ASSERT)
+{
     var versions = [],
         result;
 
@@ -249,8 +251,8 @@ exports.testLatestForEachMajor = function() {
     ]);    
 }
 
-exports.testVersionsForTags = function() {
-
+exports["test versionsForTags"] = function(ASSERT)
+{
     var tags = [],
         result;
 
@@ -279,7 +281,3 @@ exports.testVersionsForTags = function() {
         "0.1.1beta1"
     ]);
 }
-
-
-if (require.main == module.id)
-    require("os").exit(require("test").run(exports));
