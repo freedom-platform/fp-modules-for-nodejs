@@ -243,29 +243,32 @@ exports["test latestForRevision"] = function(ASSERT)
     version = "1";
     result = SEMVER.latestForRevision(versions, version);
     ASSERT.equal(result, false);
-    
+
+    result = SEMVER.latestForRevision(versions, version, true);
+    ASSERT.equal(result, "v1.0.0beta1rc2");
+
 	version = "1.0";
-	result = SEMVER.latestForMajor(versions, version);
+	result = SEMVER.latestForRevision(versions, version);
     ASSERT.equal(result, false);
 
 	version = "1.0beta";
-	result = SEMVER.latestForMajor(versions, version);
+	result = SEMVER.latestForRevision(versions, version);
     ASSERT.equal(result, "v1.0.0beta1rc2");
 
     version = "1.0.0beta";
-    result = SEMVER.latestForMajor(versions, version);
+    result = SEMVER.latestForRevision(versions, version);
     ASSERT.equal(result, "v1.0.0beta1rc2");
 	
     version = "2b";
-    result = SEMVER.latestForMajor(versions, version);
+    result = SEMVER.latestForRevision(versions, version);
     ASSERT.equal(result, "v2.0beta2rc2");
 
     version = "3b";
-    result = SEMVER.latestForMajor(versions, version);
+    result = SEMVER.latestForRevision(versions, version);
     ASSERT.equal(result, "v3.1beta2rc2");
     
     version = "4b";
-    result = SEMVER.latestForMajor(versions, version);
+    result = SEMVER.latestForRevision(versions, version);
     ASSERT.equal(result, "v4.1.0beta2rc1");
     
     versions = [
@@ -273,7 +276,7 @@ exports["test latestForRevision"] = function(ASSERT)
         "v1.0.0beta1"
     ];
     version = "1b";
-    result = SEMVER.latestForMajor(versions, version);
+    result = SEMVER.latestForRevision(versions, version);
     ASSERT.equal(result, "v1.0.0beta1");
     
     versions = [
@@ -282,16 +285,25 @@ exports["test latestForRevision"] = function(ASSERT)
         "v1.0.0beta2rc2"
     ];
     version = "1b2rc";
-    result = SEMVER.latestForMajor(versions, version);
+    result = SEMVER.latestForRevision(versions, version);
     ASSERT.equal(result, "v1.0.0beta2rc2");
     
     version = "1b1rc";
-    result = SEMVER.latestForMajor(versions, version);
+    result = SEMVER.latestForRevision(versions, version);
     ASSERT.equal(result, "v1.0.0beta2rc2");
 
     version = "1b3rc";
-    result = SEMVER.latestForMajor(versions, version);
+    result = SEMVER.latestForRevision(versions, version);
     ASSERT.equal(result, false);
+
+    versions = [
+		'0.0.3',
+		'1.0.0b1rc1'
+    ];
+    version = "1";
+    result = SEMVER.latestForRevision(versions, version, true);
+    ASSERT.equal(result, '1.0.0b1rc1');
+   
 }
 
 exports["test latestForEachMajor"] = function(ASSERT)
@@ -408,12 +420,37 @@ exports["test latestForEachMajor"] = function(ASSERT)
 		'v5',
 		'6'
 	]);
+    
+    versions = [
+        "0.1.0beta1",
+        "0.1.0beta2",
+        "0.1.0beta2rc1",
+        "1.0.0beta1",
+        "1.1.0beta1",
+        "2.0.0beta1rc1",
+        "2.0.0beta1rc2",
+        "2.0.0beta1"
+    ];
+    result = SEMVER.latestForEachMajor(versions, true);
+    ASSERT.deepEqual(result, [
+		'0.1.0beta2',
+		'1.1.0beta1',
+		'2.0.0beta1'
+    ]);    
 }
 
 exports["test versionsForTags"] = function(ASSERT)
 {
     var tags = [],
         result;
+
+    tags = [
+        "v1.0",
+    ];
+    result = SEMVER.versionsForTags(tags);
+    ASSERT.deepEqual(result, [
+        "v1.0",
+    ]);
 
     tags = [
         "v4.4",
@@ -428,12 +465,12 @@ exports["test versionsForTags"] = function(ASSERT)
     ];
     result = SEMVER.versionsForTags(tags);
     ASSERT.deepEqual(result, [
-        "0.1.0",
-        "3.0.0alpha1",
-        "4.3rc1",
-        "4.4",
-        "5.0beta2rc1",
-        "5.0.0beta2rc2",
+        "v4.4",
+        "v4.3rc1",
+        "v0.1.0",
+        "v3.0.0alpha1",
+        "v5.0.0beta2rc2",
+        "v5.0beta2rc1",
     ]);
 
     tags = [
@@ -443,7 +480,7 @@ exports["test versionsForTags"] = function(ASSERT)
     ];
     result = SEMVER.versionsForTags(tags, "test/path");
     ASSERT.deepEqual(result, [
-        "0.1.1alpha1",
-        "0.1.1beta1"
+        "v0.1.1alpha1",
+        "v0.1.1beta1"
     ]);
 }
