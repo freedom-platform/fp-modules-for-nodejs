@@ -17,6 +17,13 @@
             "web": "http://www.christophdorn.com/"
         }
     ],
+    "contributors": [
+        {
+            "name": "Christoph Dorn",
+            "email": "christoph@christophdorn.com",
+            "web": "http://www.christophdorn.com/"
+        }
+    ],
     "licenses": [
         {
             "type": "MIT",
