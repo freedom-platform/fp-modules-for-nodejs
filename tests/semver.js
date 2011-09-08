@@ -303,7 +303,10 @@ exports["test latestForRevision"] = function(ASSERT)
     version = "1";
     result = SEMVER.latestForRevision(versions, version, true);
     ASSERT.equal(result, '1.0.0b1rc1');
-   
+
+    version = "1:1.0";
+    result = SEMVER.latestForRevision(versions, version, true);
+    ASSERT.equal(result, '1.0.0b1rc1');
 }
 
 exports["test latestForEachMajor"] = function(ASSERT)
