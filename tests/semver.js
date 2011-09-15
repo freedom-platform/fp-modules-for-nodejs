@@ -298,15 +298,24 @@ exports["test latestForRevision"] = function(ASSERT)
 
     versions = [
 		'0.0.3',
-		'1.0.0b1rc1'
+		'v1.0.0b1rc1',
+		'v1.0.0b1rc2'
     ];
     version = "1";
     result = SEMVER.latestForRevision(versions, version, true);
-    ASSERT.equal(result, '1.0.0b1rc1');
+    ASSERT.equal(result, 'v1.0.0b1rc2');
 
     version = "1:1.0";
     result = SEMVER.latestForRevision(versions, version, true);
-    ASSERT.equal(result, '1.0.0b1rc1');
+    ASSERT.equal(result, 'v1.0.0b1rc2');
+    
+    version = "1:1.0.0b1rc1";
+    result = SEMVER.latestForRevision(versions, version, true);
+    ASSERT.equal(result, 'v1.0.0b1rc1');
+
+    version = "1.0.0b1rc1";
+    result = SEMVER.latestForRevision(versions, version, true);
+    ASSERT.equal(result, 'v1.0.0b1rc2');
 }
 
 exports["test latestForEachMajor"] = function(ASSERT)
