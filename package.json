@@ -58,6 +58,22 @@
                     "available": true
                 }
             }
+        },
+        "pinf:gpsee": {
+            "mappings": {
+                "pinf": {
+                    "id": "pinf.org/loader",
+                    "available": true
+                }
+            }
+        },
+        "pinf:ringo": {
+            "mappings": {
+                "pinf": {
+                    "id": "pinf.org/loader",
+                    "available": true
+                }
+            }
         }
     },
     "mappings": {
