@@ -5,6 +5,8 @@ Various Cross-platform JavaScript Modules
 
 Various cross-platform JavaScript modules mostly taken from [narwhal](http://narwhaljs.org/) and related projects.
 
+**NOTE: APIs will likely change over time.**
+
 **NOTE:** This package is intended to be used via the [PINF JavaScript Loader](https://github.com/pinf/loader-js).
 
 

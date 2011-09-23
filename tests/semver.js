@@ -4,7 +4,7 @@ var SEMVER = require("../lib/semver");
 
 exports.run = function(ASSERT, harness)
 {
-	harness.runAll(exports);
+	return harness.runAll(exports);
 }
 
 exports["test getMajor"] = function(ASSERT)
