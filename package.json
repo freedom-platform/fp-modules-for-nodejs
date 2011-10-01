@@ -67,6 +67,22 @@
                 }
             }
         },
+        "pinf:v8cgi": {
+            "mappings": {
+                "pinf": {
+                    "id": "pinf.org/loader",
+                    "available": true
+                }
+            }
+        },
+        "pinf:narwhal": {
+            "mappings": {
+                "pinf": {
+                    "id": "pinf.org/loader",
+                    "available": true
+                }
+            }
+        },
         "pinf:ringo": {
             "mappings": {
                 "pinf": {
