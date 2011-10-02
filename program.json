@@ -13,6 +13,9 @@
         "nodejs.org": {
             "provider": "nodejs.org"
         },
+        "narwhaljs.org": {
+            "provider": "narwhaljs.org"
+        },
         "pinf.org/loader": {
             "provider": "pinf.org/loader"
         },
