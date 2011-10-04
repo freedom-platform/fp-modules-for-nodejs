@@ -10,14 +10,23 @@
                 "location": "."
             }
         },
-        "nodejs.org": {
-            "provider": "nodejs.org"
+        "nodejs.org/": {
+            "provider": "nodejs.org/"
         },
-        "narwhaljs.org": {
-            "provider": "narwhaljs.org"
+        "narwhaljs.org/": {
+            "provider": "narwhaljs.org/"
         },
-        "pinf.org/loader": {
-            "provider": "pinf.org/loader"
+        "code.google.com/p/v8cgi/": {
+            "provider": "code.google.com/p/v8cgi/"
+        },
+        "code.google.com/p/gpsee/": {
+            "provider": "code.google.com/p/gpsee/"
+        },
+        "ringojs.org/": {
+            "provider": "ringojs.org/"
+        },
+        "pinf.org/loader/": {
+            "provider": "pinf.org/loader/"
         },
         "github.com/kriskowal/q/": {
             "locator": {

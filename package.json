@@ -36,72 +36,75 @@
             "id": "github.com/pinf/test-js/"
         }
     },
+    "mappings": {
+        "pinf": {
+            "id": "pinf.org/loader/",
+            "available": false
+        },
+        "q": {
+            "id": "github.com/kriskowal/q/"
+        }
+    },
     "overlay": {
         "pinf:jetpack": {
             "mappings": {
-                "jetpack": {
-                    "id": "mozilla.org/labs/jetpack"
-                },
                 "pinf": {
-                    "id": "pinf.org/loader",
                     "available": true
+                },
+                "jetpack": {
+                    "id": "mozilla.org/labs/jetpack/"
                 }
             }
         },
         "pinf:node": {
             "mappings": {
-                "nodejs": {
-                    "id": "nodejs.org"
-                },
                 "pinf": {
-                    "id": "pinf.org/loader",
                     "available": true
+                },
+                "nodejs": {
+                    "id": "nodejs.org/"
                 }
             }
         },
         "pinf:gpsee": {
             "mappings": {
                 "pinf": {
-                    "id": "pinf.org/loader",
                     "available": true
+                },
+                "gpsee": {
+                    "id": "code.google.com/p/gpsee/"
                 }
             }
         },
         "pinf:v8cgi": {
             "mappings": {
                 "pinf": {
-                    "id": "pinf.org/loader",
                     "available": true
+                },
+                "v8cgi": {
+                    "id": "code.google.com/p/v8cgi/"
                 }
             }
         },
         "pinf:narwhal": {
             "mappings": {
-                "narwhal": {
-                    "id": "narwhaljs.org"
-                },
                 "pinf": {
-                    "id": "pinf.org/loader",
                     "available": true
+                },
+                "narwhal": {
+                    "id": "narwhaljs.org/"
                 }
             }
         },
         "pinf:ringo": {
             "mappings": {
                 "pinf": {
-                    "id": "pinf.org/loader",
                     "available": true
+                },
+                "ringo": {
+                    "id": "ringojs.org/"
                 }
             }
-        }
-    },
-    "mappings": {
-        "pinf": {
-            "id": "pinf.org/loader",
-            "available": false
-        },
-        "q": {
-            "id": "github.com/kriskowal/q/"
         }
     }
 }
