@@ -318,6 +318,35 @@ exports["test latestForRevision"] = function(ASSERT)
     ASSERT.equal(result, 'v1.0.0b1rc2');
 }
 
+exports["test latestForMajor"] = function(ASSERT)
+{
+    var tags = [],
+    	revision,
+        result;
+
+    tags = [
+        "v0.1.1",
+        "v0.1.11",
+        "v0.1.12",
+        "v0.1.7",
+    ];
+    revision = "v0.1.11";
+    result = SEMVER.latestForMajor(tags, revision);
+    ASSERT.equal(result, "v0.1.12");
+
+    revision = "0.1.11";
+    result = SEMVER.latestForMajor(tags, revision);
+    ASSERT.equal(result, "v0.1.12");
+    
+    revision = "v0.1.12";
+    result = SEMVER.latestForMajor(tags, revision);
+    ASSERT.equal(result, "v0.1.12");
+
+    revision = "0.1.12";
+    result = SEMVER.latestForMajor(tags, revision);
+    ASSERT.equal(result, "v0.1.12");
+}
+
 exports["test latestForEachMajor"] = function(ASSERT)
 {
     var versions = [],
