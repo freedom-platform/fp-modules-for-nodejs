@@ -316,6 +316,15 @@ exports["test latestForRevision"] = function(ASSERT)
     version = "1.0.0b1rc1";
     result = SEMVER.latestForRevision(versions, version, true);
     ASSERT.equal(result, 'v1.0.0b1rc2');
+    
+    versions = [
+		'1.1b1',
+		'1.1',
+		'1.2b1'
+    ];
+    version = "1b";
+    result = SEMVER.latestForRevision(versions, version, true);
+    ASSERT.equal(result, '1.2b1');
 }
 
 exports["test latestForMajor"] = function(ASSERT)
@@ -328,7 +337,7 @@ exports["test latestForMajor"] = function(ASSERT)
         "v0.1.1",
         "v0.1.11",
         "v0.1.12",
-        "v0.1.7",
+        "v0.1.7"
     ];
     revision = "v0.1.11";
     result = SEMVER.latestForMajor(tags, revision);
