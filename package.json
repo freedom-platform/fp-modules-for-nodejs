@@ -1,13 +1,13 @@
 {
-    "uid": "https://github.com/pinf/modules-js/",
-    "name": "modules-js",
-    "label": "Various JavaScript Modules",
-    "description": "Various cross-platform JavaScript modules",
-    "homepage": "https://github.com/pinf/modules-js",
+    "uid": "https://github.com/freedom-platform/fp-modules-for-nodejs/",
+    "name": "fp-modules-for-nodejs",
+    "label": "Various NodeJS Modules",
+    "description": "Various NodeJS modules that will go cross-platform in future",
+    "homepage": "https://github.com/freedom-platform/fp-modules-for-nodejs",
     "repositories": [
         {
             "type": "git",
-            "url": "git://github.com/pinf/modules-js.git"
+            "url": "git://github.com/freedom-platform/fp-modules-for-nodejs.git"
         }
     ],
     "maintainers": [
@@ -30,13 +30,22 @@
             "url": "http://www.opensource.org/licenses/mit-license.php"
         }
     ],
-    "main": "lib/modules.js",
+    "main": "./lib/modules.js",
+    "directories": {
+        "lib": "./lib"
+    },
     "scripts": {
         "test": {
             "id": "github.com/pinf/test-js/"
         }
     },
     "mappings": {
+        "q": "./node_modules/q"
+    },
+    "dependencies": {
+        "q": "~1.1.2"
+    },
+    "mappings_OLD": {
         "pinf": {
             "id": "pinf.org/loader/",
             "available": false
