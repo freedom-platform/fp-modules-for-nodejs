@@ -1,120 +1,120 @@
 {
-    "uid": "https://github.com/freedom-platform/fp-modules-for-nodejs/",
-    "name": "fp-modules-for-nodejs",
-    "label": "Various NodeJS Modules",
-    "description": "Various NodeJS modules that will go cross-platform in future",
-    "homepage": "https://github.com/freedom-platform/fp-modules-for-nodejs",
-    "version": "0.1.0",
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git://github.com/freedom-platform/fp-modules-for-nodejs.git"
-        }
-    ],
-    "maintainers": [
-        {
-            "name": "Christoph Dorn",
-            "email": "christoph@christophdorn.com",
-            "web": "http://www.christophdorn.com/"
-        }
-    ],
-    "contributors": [
-        {
-            "name": "Christoph Dorn",
-            "email": "christoph@christophdorn.com",
-            "web": "http://www.christophdorn.com/"
-        }
-    ],
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "http://www.opensource.org/licenses/mit-license.php"
-        }
-    ],
-    "main": "./lib/modules.js",
-    "directories": {
-        "lib": "./lib"
-    },
-    "scripts": {
-        "test": {
-            "id": "github.com/pinf/test-js/"
-        }
-    },
-    "mappings": {
-        "q": "./node_modules/q"
-    },
-    "dependencies": {
-        "q": "~1.1.2"
-    },
-    "mappings_OLD": {
-        "pinf": {
-            "id": "pinf.org/loader/",
-            "available": false
-        },
-        "q": {
-            "id": "github.com/kriskowal/q/"
-        }
-    },
-    "overlay": {
-        "pinf:jetpack": {
-            "mappings": {
-                "pinf": {
-                    "available": true
-                },
-                "jetpack": {
-                    "id": "mozilla.org/labs/jetpack/"
-                }
-            }
-        },
-        "pinf:node": {
-            "mappings": {
-                "pinf": {
-                    "available": true
-                },
-                "nodejs": {
-                    "id": "nodejs.org/"
-                }
-            }
-        },
-        "pinf:gpsee": {
-            "mappings": {
-                "pinf": {
-                    "available": true
-                },
-                "gpsee": {
-                    "id": "code.google.com/p/gpsee/"
-                }
-            }
-        },
-        "pinf:v8cgi": {
-            "mappings": {
-                "pinf": {
-                    "available": true
-                },
-                "v8cgi": {
-                    "id": "code.google.com/p/v8cgi/"
-                }
-            }
-        },
-        "pinf:narwhal": {
-            "mappings": {
-                "pinf": {
-                    "available": true
-                },
-                "narwhal": {
-                    "id": "narwhaljs.org/"
-                }
-            }
-        },
-        "pinf:ringo": {
-            "mappings": {
-                "pinf": {
-                    "available": true
-                },
-                "ringo": {
-                    "id": "ringojs.org/"
-                }
-            }
-        }
+  "uid": "https://github.com/freedom-platform/fp-modules-for-nodejs/",
+  "name": "fp-modules-for-nodejs",
+  "label": "Various NodeJS Modules",
+  "description": "Various NodeJS modules that will go cross-platform in future",
+  "homepage": "https://github.com/freedom-platform/fp-modules-for-nodejs",
+  "version": "0.1.1",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git://github.com/freedom-platform/fp-modules-for-nodejs.git"
     }
+  ],
+  "maintainers": [
+    {
+      "name": "Christoph Dorn",
+      "email": "christoph@christophdorn.com",
+      "web": "http://www.christophdorn.com/"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Christoph Dorn",
+      "email": "christoph@christophdorn.com",
+      "web": "http://www.christophdorn.com/"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "main": "./lib/modules.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "test": {
+      "id": "github.com/pinf/test-js/"
+    }
+  },
+  "mappings": {
+    "q": "./node_modules/q"
+  },
+  "dependencies": {
+    "q": "~1.1.2"
+  },
+  "mappings_OLD": {
+    "pinf": {
+      "id": "pinf.org/loader/",
+      "available": false
+    },
+    "q": {
+      "id": "github.com/kriskowal/q/"
+    }
+  },
+  "overlay": {
+    "pinf:jetpack": {
+      "mappings": {
+        "pinf": {
+          "available": true
+        },
+        "jetpack": {
+          "id": "mozilla.org/labs/jetpack/"
+        }
+      }
+    },
+    "pinf:node": {
+      "mappings": {
+        "pinf": {
+          "available": true
+        },
+        "nodejs": {
+          "id": "nodejs.org/"
+        }
+      }
+    },
+    "pinf:gpsee": {
+      "mappings": {
+        "pinf": {
+          "available": true
+        },
+        "gpsee": {
+          "id": "code.google.com/p/gpsee/"
+        }
+      }
+    },
+    "pinf:v8cgi": {
+      "mappings": {
+        "pinf": {
+          "available": true
+        },
+        "v8cgi": {
+          "id": "code.google.com/p/v8cgi/"
+        }
+      }
+    },
+    "pinf:narwhal": {
+      "mappings": {
+        "pinf": {
+          "available": true
+        },
+        "narwhal": {
+          "id": "narwhaljs.org/"
+        }
+      }
+    },
+    "pinf:ringo": {
+      "mappings": {
+        "pinf": {
+          "available": true
+        },
+        "ringo": {
+          "id": "ringojs.org/"
+        }
+      }
+    }
+  }
 }
