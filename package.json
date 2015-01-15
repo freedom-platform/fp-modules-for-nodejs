@@ -4,6 +4,7 @@
     "label": "Various NodeJS Modules",
     "description": "Various NodeJS modules that will go cross-platform in future",
     "homepage": "https://github.com/freedom-platform/fp-modules-for-nodejs",
+    "version": "0.1.0",
     "repositories": [
         {
             "type": "git",
